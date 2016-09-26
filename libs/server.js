@@ -25,8 +25,8 @@ server.get('/minesweeper', function(request, response){
     require('./world.minesweeper/minesweeper')(request, response);
 });
 
-server.get('/astroman', function(request, response){
-    require('./world.astroport/astroman')(request, response);
+server.get('/astroport', function(request, response){
+    require('./world.astroport/astroport')(request, response);
 });
 
 module.exports = server;

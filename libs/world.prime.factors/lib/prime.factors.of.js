@@ -8,7 +8,8 @@ primeFactorsOf = function(number) {
 		}
 		factor ++;
 	}
-	return factors;
+
+	return (typeof number === 'string' || number instanceof String)? "not a number" : factors;
 };
 
 module.exports = primeFactorsOf;

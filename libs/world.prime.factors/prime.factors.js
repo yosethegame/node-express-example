@@ -8,7 +8,9 @@ var primeFactors = function(request, response) {
     var decomposition = primeFactorsOf(number);
 
 	response.setHeader('Content-Type', 'application/json');
-    response.send({ number: number, decomposition: decomposition });
+    var number = response.send({ number: number, decomposition: decomposition });
+
+    (typeof number === 'string' || number instanceof String)? response.send({ number: number, error: decomposition }) : number;
 };
 
 module.exports = primeFactors;

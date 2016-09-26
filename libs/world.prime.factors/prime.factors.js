@@ -2,7 +2,7 @@ var primeFactorsOf = require('./lib/prime.factors.of');
 
 var primeFactors = function(request, response) {
     
-	var number = request.query['number'];
+	var number = parseInt(request.query['number']);
     console.log('Prime Factors Challenge Number: ' + number);
 
     var decomposition = primeFactorsOf(number);
